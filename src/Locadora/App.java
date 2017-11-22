@@ -8,11 +8,15 @@ public class App {
 		ArrayList<Filme> filmes = new ArrayList<Filme>();
 		
 		//Adiciona Primeiro Filme
-		Filme filme = new Filme();
-		//filme.getId_filme(1);
+		Filme filme = new Filme("Kill Bill",130,2003,"Jose"); 
+
+		filme.addAtores("Joao");
+		filme.addAtores ("Maria");
 				
 		filmes.add(filme);
+		Copia copia = new Copia(filme);
 
 	}
 
 }
+

@@ -4,13 +4,27 @@ import java.util.ArrayList;
 
 public class Filme {
 
-	protected int id_filme;
-	protected String titulo;
-	protected int duracao;
-	protected int ano;
-	protected String formato;
-	protected ArrayList<String> atores = new ArrayList <>();
+	private int id_filme;
+	private String titulo;
+	private int duracao;
+	private int ano;
+	private String formato;
+	private ArrayList<String> atores = new ArrayList <>();
+	private ArrayList<Copia> copia = new ArrayList <>();
 	
+	public Filme(String titulo,int duracao,int ano,String atores){
+		this.titulo = titulo;
+		this.duracao = duracao;
+		this.ano = ano;
+		this.atores.add(atores);
+	}
+		
+	public ArrayList<Copia> getCopia() {
+		return copia;
+	}
+	public void setCopia(ArrayList<Copia> copia) {
+		this.copia = copia;
+	}
 	public String getTitulo() {
 		return titulo;
 	}
@@ -44,8 +58,8 @@ public class Filme {
 	public ArrayList<String> getAtores() {
 		return atores;
 	}
-	public void setAtores(ArrayList<String> atores) {
-		this.atores = atores;
+	public void addAtores(String atores) {
+		this.atores.add(atores);
 	}
 		
 	@Override
